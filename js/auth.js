@@ -90,3 +90,12 @@ function requireAuth() {
         window.location.href = 'login.html';
     });
 }
+
+// In login function
+console.log('Login attempt:', email);
+
+// In register function
+console.log('Register attempt:', email);
+
+// After successful operations
+console
