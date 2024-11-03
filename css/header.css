@@ -304,3 +304,52 @@ body
         top: 18px;
     }
 }
+
+/* Add these styles to your existing header.css */
+
+#authContainer {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+#loggedOut, #loggedIn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.auth-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.auth-link:hover {
+    background-color: #f0f0f0;
+}
+
+#userName {
+    font-size: 14px;
+    color: #4a90e2;
+    margin-right: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    #authContainer {
+        margin-left: 10px;
+    }
+
+    .auth-link {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+
+    #userName {
+        font-size: 12px;
+    }
+}
