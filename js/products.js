@@ -14,6 +14,7 @@ const products = [
         description: "Powerful laptop for professionals.",
         image: "images/laptop-pro.jpg"
     },
+    
     // Add more products here
 ];
 
