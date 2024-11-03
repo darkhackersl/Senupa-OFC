@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | MR Gadgets</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="checkout-container">
+        <div class="checkout-header">
+            <h1>Checkout</h1>
+        </div>
+
+        <div class="checkout-content">
+            <!-- Order Summary Section -->
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <div id="cart-summary"></div>
+                <div class="total-section">
+                    <div class="subtotal">
+                        <span>Subtotal:</span>
+                        <span id="subtotal-amount"></span>
+                    </div>
+                    <div class="shipping">
+                        <span>Shipping:</span>
+                        <span id="shipping-amount">$5.00</span>
+                    </div>
+                    <div class="total">
+                        <span>Total:</span>
+                        <span id="total-amount"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Checkout Form -->
+            <div class="checkout-form">
+                <form id="checkoutForm">
+                    <div class="form-section">
+                        <h3>Contact Information</h3>
+                        <div class="form-group">
+                            <input type="text" id="fullName" required placeholder="Full Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" required placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" required placeholder="Phone Number">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Shipping Address</h3>
+                        <div class="form-group">
+                            <input type="text" id="address" required placeholder="Street Address">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="apartment" placeholder="Apartment, suite, etc. (optional)">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="city" required placeholder="City">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="state" required placeholder="State">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="zipCode" required placeholder="ZIP Code">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Payment Method</h3>
+                        <div class="payment-options">
+                            <div class="payment-option">
+                                <input type="radio" id="cashOnDelivery" name="paymentMethod" value="cod" checked>
+                                <label for="cashOnDelivery">Cash on Delivery</label>
+                            </div>
+                            <div class="payment-option">
+                                <input type="radio" id="cardPayment" name="paymentMethod" value="card">
+                                <label for="cardPayment">Card Payment</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="place-order-btn">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/checkout.js"></script>
+</body>
+</html>
