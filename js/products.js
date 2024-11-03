@@ -5,7 +5,7 @@ const products = [
         name: "Smartphone X",
         price: 599.99,
         description: "Latest model with advanced features.",
-        image: "images/smartphone-x.jpg"
+        image: "img/icon.png"
     },
     {
         id: 2,
