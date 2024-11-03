@@ -1,5 +1,33 @@
 // script.js
 
+// Add this to your existing script.js
+
+// Function to check if user is authenticated
+function checkAuthStatus() {
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (!user && requiresAuth()) {
+            // Redirect to login if page requires auth
+            window.location.href = 'login.html';
+        }
+    });
+}
+
+// Function to determine if current page requires authentication
+function requiresAuth() {
+    // Add paths that require authentication
+    const protectedPaths = [
+        '/cart.html',
+        '/profile.html',
+        // Add other protected paths
+    ];
+    
+    const currentPath = window.location.pathname;
+    return protectedPaths.some(path => currentPath.endsWith(path));
+}
+
+// Call this when page loads
+document.addEventListener('DOMContentLoaded', checkAuthStatus);
+
 // Cart functionality
 let cartCount = 0;
 let cartItems = [];
