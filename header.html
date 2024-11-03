@@ -3,85 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> HEADER | MR Gadgets </title>
-    <!-- favicon -->
-    <link rel="icon" href="https://ibb.co/QbbfW5P" type="image/gif" sizes="16x16">
+    <title>HEADER | MR Gadgets</title>
     <!-- EXTERNAL LINKS -->
     <link rel="stylesheet" href="css/header.css">
     <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 </head>
 <body>
-    
     <header>
         <section>
-            <!-- MAIN CONTAINER -->
             <div id="container">
                 <!-- SHOP NAME -->
                 <div id="shopName"><a href="index.html"> <b>MR</b>Gadgets </a></div>
-                <!-- COLLCETIONS ON WEBSITE -->
+                
+                <!-- COLLCETIONS -->
                 <div id="collection">
                     <div id="clothing"><a href="clothing.html"> CLOTHING </a></div>
                     <div id="accessories"><a href="products.html"> ACCESSORIES </a></div>
                 </div>
-                <!-- SEARCH SECTION -->
+                
+                <!-- SEARCH -->
                 <div id="search">
                     <i class="fas fa-search search"></i>
                     <input type="text" id="input" name="searchBox" placeholder="Search for Clothing and Accessories">
                 </div>
-                <!-- In the user section of your header -->
-    <!-- ... other user elements ... -->
-</div>
+                
                 <!-- USER SECTION -->
                 <div id="user">
+                    <!-- Cart Icon -->
                     <a href="cart.html"> 
                         <i class="fas fa-shopping-cart addedToCart">
                             <div id="badge"> 0 </div>
                         </i>
                     </a>
-                    <!-- Auth Status Container -->
-                    <div id="authContainer">
-                        <!-- Show when logged out -->
-                        <div id="loggedOut">
-                            <a href="login.html" class="auth-link">Login</a>
-                            <a href="register.html" class="auth-link">Register</a>
-                        </div>
-                        <!-- Show when logged in -->
-                        <div id="loggedIn" style="display: none;">
-                            <span id="userName"></span>
-                            <a href="#" onclick="logout()" class="auth-link">Logout</a>
-                        </div>
+                    
+                    <!-- Auth Links -->
+                    <div id="authLinks">
+                        <a href="login.html" class="auth-link">Login</a>
+                        <a href="register.html" class="auth-link">Register</a>
                     </div>
                 </div>
             </div>
         </section>
     </header>
-
-    <!-- Firebase Scripts -->
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="js/firebase-config.js"></script>
-    <script src="js/auth.js"></script>
-
-    <script>
-        // Check auth state and update UI
-        firebase.auth().onAuthStateChanged(function(user) {
-            const loggedInDiv = document.getElementById('loggedIn');
-            const loggedOutDiv = document.getElementById('loggedOut');
-            const userNameSpan = document.getElementById('userName');
-
-            if (user) {
-                // User is signed in
-                loggedInDiv.style.display = 'block';
-                loggedOutDiv.style.display = 'none';
-                userNameSpan.textContent = user.displayName || user.email;
-            } else {
-                // User is signed out
-                loggedInDiv.style.display = 'none';
-                loggedOutDiv.style.display = 'block';
-            }
-        });
-    </script>
 </body>
 </html>
