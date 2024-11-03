@@ -1,48 +1,203 @@
-/* Add these styles to your existing header.css */
-
-#authContainer {
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
+body
+{
+    margin: 0;
 }
-
-#loggedOut, #loggedIn {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+#badge
+{
+    position: absolute;
+    background-color: rgb(255, 30, 30);
+    color: white;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 14px;
+    top: 10px;
+    right:158px;
 }
-
-.auth-link {
-    color: #333;
+#container
+{
+    background-color: white;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1.5fr 1.5fr 5fr 1fr;
+    font-family: 'Lato', sans-serif;
+    z-index: 1;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-sizing: border-box;
+    position: fixed;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 2px 6px 2px rgba(60, 64, 67, 0.149); 
+}
+#shopName 
+{
+    font-size: 40px; 
+    font-family: 'Lato', sans-serif;
+}
+#shopName a
+{
     text-decoration: none;
-    font-size: 14px;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: all 0.3s ease;
+    color: rgb(29, 29, 29);
+}
+#shopName > b
+{
+    font-weight: 900;
+    font: black;
 }
 
-.auth-link:hover {
-    background-color: #f0f0f0;
+#collection
+{
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#collection a
+{
+    text-decoration: none;
+    color: rgb(29, 29, 29);
 }
 
-#userName {
-    font-size: 14px;
-    color: #4a90e2;
-    margin-right: 10px;
+.search
+{
+    padding: 14px;
+    /* color: gray; */
+    color: rgb(29, 29, 29);
+    min-width: 25px;
+    text-align: center;
+    position: absolute;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-    #authContainer {
-        margin-left: 10px;
+.addedToCart
+{
+    font-size: 1.5em;
+    margin-right: 25px;
+    #collection
+    {
+        font-size: 10px;
     }
-
-    .auth-link {
-        padding: 6px 8px;
-        font-size: 12px;
+    .userIcon
+    {
+        font-size: 30px;
     }
+}
+@media(max-width: 550px)
+{
+    #container 
+    {
+        padding: 20px 25px;
+    }
+}
 
-    #userName {
+/* badge media */
+
+@media(max-width: 1480px)
+{
+    #badge
+    {
+        right:150px;
+    }
+}
+@media(max-width: 1426px)
+{
+    #badge
+    {
+        right:142px;
+    }
+}
+@media(max-width: 1360px)
+{
+    #badge
+    {
+        right:136px;
+    }
+}
+@media(max-width: 1320px)
+{
+    #badge
+    {
+        right:129px;
+    }
+}
+@media(max-width: 1259px)
+{
+    #badge
+    {
+        right:119px;
+    }
+}
+@media(max-width: 1212px)
+{
+    #badge
+    {
+        right: 96px;
+    }
+}
+@media(max-width: 1155px)
+{
+    #badge
+    {
+        right: 87px;
+    }
+}
+@media(max-width: 1090px)
+{
+    #badge
+    {
+        right: 119px;
+    }
+}
+@media(max-width: 1030px)
+{
+    #badge
+    {
+        right: 109px;
+    }
+}
+@media(max-width: 970px)
+{
+    #badge
+    {
+        right: 100px;
+    }
+}
+@media(max-width: 910px)
+{
+    #badge
+    {
+        right: 94px;
+    }
+}
+@media(max-width: 850px)
+{
+    #badge
+    {
+        right: 87px;
+    }
+}
+@media(max-width: 750px)
+{
+    #badge
+    {
+        right: 87px;
+        padding: 3px 6px;
         font-size: 12px;
+        top: 12px;
+    }
+}
+@media(max-width: 650px)
+{
+    #badge
+    {
+        right: 78px;
+    }
+}
+@media(max-width: 550px)
+{
+    #badge
+    {
+        right: 62px;
+        top: 18px;
     }
 }
